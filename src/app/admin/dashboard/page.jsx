@@ -7,7 +7,7 @@ export default function DashboardPage() {
   const cards = [
     { title: "Past Papers", path: "past-papers", emoji: "📝" },
     { title: "Syllabus", path: "syllabus", emoji: "📄" },
-    { title: "Past Paper MCQs", path: "mcqs", emoji: "❓" },
+    { title: "MCQs", path: "mcqs", emoji: "❓" },
     { title: "Quotes", path: "quotes", emoji: "💬" },
     { title: "Recommended Books", path: "books", emoji: "📚" },
     { title: "Reports", path: "reports", emoji: "📊" },
@@ -21,7 +21,7 @@ export default function DashboardPage() {
       {cards.map((card) => (
         <div
           key={card.title}
-          onClick={() => router.push(`/student/dashboard/${card.path}`)}
+          onClick={() => router.push(`/admin/dashboard/${card.path}`)}
           className="bg-white p-6 rounded-lg shadow hover:shadow-lg cursor-pointer transition"
         >
           <h2 className="text-2xl font-bold text-blue-600 mb-2">
