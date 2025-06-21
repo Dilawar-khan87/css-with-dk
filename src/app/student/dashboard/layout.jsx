@@ -10,13 +10,13 @@ export default function DashboardLayout({ children }) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUserName(user.displayName || user.email);
-      } else {
-        router.push("/login");
-      }
-    });
-    return () => unsubscribe();
+    if (user) {
+      setUserName((user.displayName || user.email).split("@")[0]);
+    } else {
+      router.push("/login");
+    }
+  });
+  return () => unsubscribe();
   }, [router]);
 
   const handleLogout = async () => {
@@ -25,18 +25,22 @@ export default function DashboardLayout({ children }) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-blue-50 text-gray-800">
       {/* Navbar */}
-      <nav className="w-full bg-white shadow-md px-6 py-4 flex justify-between items-center">
-        <span className="text-gray-800 font-semibold text-lg">👤 {userName || "Loading..."}</span>
+      <nav className="w-full bg-white shadow flex items-center justify-between px-6 py-4">
+        <span className="text-blue-900 font-semibold text-lg">
+          👤 {userName || "Loading..."}
+        </span>
         <button
           onClick={handleLogout}
-          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md"
+          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition"
         >
           Logout
         </button>
       </nav>
-      <main className="p-6">{children}</main>
+
+      {/* Content Area */}
+      <main className="p-6 max-w-7xl mx-auto">{children}</main>
     </div>
   );
 }
