@@ -6,7 +6,8 @@ export default function AdminDashboardPage() {
 
   const cards = [
     { title: "Past Papers", path: "past-papers", emoji: "📝" },
-    { title: "Syllabus", path: "syllabus", emoji: "📄" },
+    { title: "Past Papers Analysis", path: "past-paper-analysis", emoji: "📝" },
+    { title: "Vocabulary", path: "vocabulary", emoji: "📄" },
     { title: "MCQs", path: "mcqs", emoji: "❓" },
     { title: "Quotes", path: "quotes", emoji: "💬" },
     { title: "Recommended Books", path: "books", emoji: "📚" },

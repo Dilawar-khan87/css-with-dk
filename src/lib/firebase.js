@@ -9,7 +9,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyBJk6mEZ1dEmw2fZtPKmMx51-342R3Hj88",
   authDomain: "react-firebase-learning-b9be6.firebaseapp.com",
   projectId: "react-firebase-learning-b9be6",
-  storageBucket: "react-firebase-learning-b9be6.firebasestorage.app",
+  storageBucket: "react-firebase-learning-b9be6.appspot.com", // ✅ THIS LINE
   messagingSenderId: "896966904415",
   appId: "1:896966904415:web:66dfe47311539fba6ca9ea",
   measurementId: "G-SQXYYBZ3CP"
