@@ -52,17 +52,18 @@ export default function DashboardPage() {
   const router = useRouter();
 
   const cards = [
-    { title: 'Past Papers', path: 'past-papers', emoji: '📝' },
+    // { title: 'Past Papers', path: 'past-papers', emoji: '📝' },
     { title: 'Syllabus', path: 'syllabus', emoji: '📄', download: true },
     { title: 'Past Paper Analysis', path: 'past-paper-analysis', emoji: '📄' },
     { title: 'Vocabulary', path: 'vocabulary', emoji: '📄' },
     { title: 'Past Paper MCQs', path: 'mcqs', emoji: '❓' },
-    { title: 'Quotes', path: 'quotes', emoji: '💬' },
-    { title: 'Recommended Books', path: 'books', emoji: '📚' },
-    { title: 'Reports', path: 'reports', emoji: '📊' },
-    { title: 'Current Affairs', path: 'current-affairs', emoji: '🌍' },
-    { title: 'Grammar', path: 'grammar', emoji: '✍️' },
-    { title: 'Facts & Figures', path: 'facts', emoji: '📌' },
+    // { title: 'Quotes', path: 'quotes', emoji: '💬' },
+    // { title: 'Recommended Books', path: 'books', emoji: '📚' },
+    // { title: 'Reports', path: 'reports', emoji: '📊' },
+    // { title: 'Current Affairs', path: 'current-affairs', emoji: '🌍' },
+    { title: 'Essay Checker', path: 'grammar', emoji: '✍️' },
+    {title: 'Precis Checker', path: 'precis-checker', emoji: '📝' } ,
+    // { title: 'Facts & Figures', path: 'facts', emoji: '📌' },
   ];
 
   return (
